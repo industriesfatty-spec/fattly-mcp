@@ -1,0 +1,22 @@
+{
+  "name": "fattly",
+  "version": "0.1.0",
+  "description": "FATTLY from your terminal — generate AI images, video and audio.",
+  "bin": {
+    "fattly": "bin/fattly.js",
+    "genpics": "bin/fattly.js"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ],
+  "license": "MIT"
+}

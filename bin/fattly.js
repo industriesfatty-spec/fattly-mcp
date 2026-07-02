@@ -121,7 +121,7 @@ async function cmdGenerate(positionals, flags) {
 
   const body = {
     prompt,
-    modelId: flags.model || "flux-schnell",
+    modelId: flags.model || "nano-banana-2",
     aspectRatio: flags.ratio || "1:1",
     numImages: flags.n ? Number(flags.n) : 1,
   };
@@ -140,11 +140,11 @@ async function cmdGenerate(positionals, flags) {
 
 async function cmdVideo(positionals, flags) {
   const prompt = positionals.join(" ").trim();
-  if (!prompt) die('Provide a prompt, e.g.: fattly video "ocean waves" --model kling-2-5');
+  if (!prompt) die('Provide a prompt, e.g.: fattly video "ocean waves" --model kling-3-standard');
 
   const body = {
     prompt,
-    modelId: flags.model || "ltx-2",
+    modelId: flags.model || "kling-3-standard",
     duration: flags.duration ? Number(flags.duration) : undefined,
     aspectRatio: flags.ratio || "16:9",
   };
@@ -206,14 +206,14 @@ Usage:
   fattly mcp                          Start the MCP server (for Claude/Cursor)
 
   fattly generate "<prompt>" [options]
-      --model <id>     image model (default flux-schnell)
+      --model <id>     image model (default nano-banana-2)
       --ratio <r>      aspect ratio, e.g. 1:1, 16:9 (default 1:1)
       --n <1-4>        number of images (default 1)
       --image <url>    input image URL (editing models)
       --out <file>     save the first result to disk
 
   fattly video "<prompt>" [options]
-      --model <id>     ltx-2 | kling-2-5 | seedance-v1-pro (default ltx-2)
+      --model <id>     kling-3-standard | veo-3-1 | sora-2 (default kling-3-standard)
       --duration <s>   clip length in seconds
       --ratio <r>      aspect ratio (default 16:9)
       --image <url>    image URL (image-to-video)

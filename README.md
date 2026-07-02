@@ -27,8 +27,8 @@ fattly login
 fattly credits
 fattly models
 
-fattly generate "astronaut cat on Mars" --model flux-schnell --out cat.png
-fattly video "ocean waves at sunset" --model kling-2-5 --out waves.mp4
+fattly generate "astronaut cat on Mars" --model nano-banana-2 --out cat.png
+fattly video "ocean waves at sunset" --model kling-3-standard --out waves.mp4
 fattly audio "Welcome to FATTLY" --voice Rachel --out voice.mp3
 fattly audio "calm ambient" --music --seconds 30 --out music.mp3
 ```

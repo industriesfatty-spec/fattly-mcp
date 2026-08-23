@@ -45,6 +45,24 @@ fattly audio "calm ambient" --music --seconds 30 --out music.mp3
 ## MCP (Claude, Cursor)
 
 The same package is an MCP server — it lets AI assistants generate through FATTLY.
+There are two ways to connect.
+
+### Option A — Hosted (no install, sign in with OAuth)
+
+The fastest way: connect Claude straight to the hosted FATTLY MCP. No npm, no key to
+paste — you approve access in your browser.
+
+In Claude → **Settings → Connectors → Add custom connector**, use this URL:
+
+```
+https://fattly.app/api/mcp
+```
+
+Claude discovers the login automatically and opens a consent page on fattly.app; approve
+it and the tools are ready. Uses your fattly.app account and credits.
+
+### Option B — Local (npx, with your API key)
+
 Add this to your client's MCP config:
 
 ```json

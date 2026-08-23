@@ -1,7 +1,16 @@
+<div align="center">
+
 # fattly — FATTLY CLI
 
-Generate AI images, video and audio from your terminal. Credits come from your
-account on the website.
+**Generate AI images, video, voiceovers, avatars & UGC ads from your terminal — or from AI assistants like Claude & Cursor via MCP.**
+
+30+ AI models · credits from your [fattly.app](https://fattly.app) account.
+
+[![Website](https://img.shields.io/badge/Try%20it-fattly.app-FF6A4A?style=for-the-badge)](https://fattly.app)
+
+</div>
+
+---
 
 ## Install
 

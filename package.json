@@ -1,7 +1,29 @@
 {
   "name": "fattly",
   "version": "0.1.0",
-  "description": "FATTLY from your terminal — generate AI images, video and audio.",
+  "description": "FATTLY from your terminal — generate AI images, video, voiceovers, avatars & UGC ads. Official CLI + MCP client for fattly.app.",
+  "keywords": [
+    "fattly",
+    "ai",
+    "image-generation",
+    "video-generation",
+    "text-to-speech",
+    "tts",
+    "voice-clone",
+    "ugc",
+    "mcp",
+    "cli",
+    "fal"
+  ],
+  "homepage": "https://fattly.app",
+  "bugs": {
+    "url": "https://github.com/industriesfatty-spec/fattly-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/industriesfatty-spec/fattly-mcp.git"
+  },
+  "author": "Fattly (fattly.app)",
   "bin": {
     "fattly": "bin/fattly.js",
     "genpics": "bin/fattly.js"

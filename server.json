@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.industriesfatty-spec/fattly",
+  "description": "AI images, video, voiceovers and UGC ads from 50+ models. Official MCP server for fattly.app.",
+  "repository": {
+    "url": "https://github.com/industriesfatty-spec/fattly-mcp",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "fattly",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "FATTLY_API_KEY",
+          "description": "Your Fattly API key (gpx_live_...), from Dashboard > API keys on fattly.app",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://fattly.app/api/mcp"
+    }
+  ],
+  "websiteUrl": "https://fattly.app"
+}

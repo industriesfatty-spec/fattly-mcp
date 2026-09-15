@@ -1,6 +1,7 @@
 {
   "name": "fattly",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.industriesfatty-spec/fattly",
   "description": "FATTLY from your terminal — generate AI images, video, voiceovers, avatars & UGC ads. Official CLI + MCP client for fattly.app.",
   "keywords": [
     "fattly",
@@ -12,8 +13,14 @@
     "voice-clone",
     "ugc",
     "mcp",
+    "model-context-protocol",
     "cli",
-    "fal"
+    "fal",
+    "claude",
+    "cursor",
+    "ai-agents",
+    "text-to-image",
+    "text-to-video"
   ],
   "homepage": "https://fattly.app",
   "bugs": {
@@ -24,6 +31,7 @@
     "url": "git+https://github.com/industriesfatty-spec/fattly-mcp.git"
   },
   "author": "Fattly (fattly.app)",
+  "license": "MIT",
   "bin": {
     "fattly": "bin/fattly.js",
     "genpics": "bin/fattly.js"
@@ -32,13 +40,17 @@
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0"
   },
   "files": [
     "bin",
     "lib",
-    "README.md"
-  ],
-  "license": "MIT"
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
 }

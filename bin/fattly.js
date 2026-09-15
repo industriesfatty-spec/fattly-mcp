@@ -213,7 +213,7 @@ Usage:
       --out <file>     save the first result to disk
 
   fattly video "<prompt>" [options]
-      --model <id>     kling-3-standard | veo-3-1 | sora-2 (default kling-3-standard)
+      --model <id>     kling-3-standard | kling-3-pro | veo-3-1 | seedance-2-5 … (default kling-3-standard; full list: fattly models video)
       --duration <s>   clip length in seconds
       --ratio <r>      aspect ratio (default 16:9)
       --image <url>    image URL (image-to-video)

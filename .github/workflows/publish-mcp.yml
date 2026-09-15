@@ -1,0 +1,39 @@
+name: Publish to MCP Registry
+
+# Publishes server.json to the Official MCP Registry when a GitHub release is
+# published (or manually). Auth = GitHub OIDC, so no secrets are stored.
+# The npm package with the same version must already be on npm.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check versions match
+        run: |
+          PKG=$(node -p "require('./package.json').version")
+          SRV=$(node -p "require('./server.json').version")
+          NPM=$(npm view fattly@"$PKG" version)
+          echo "package.json=$PKG server.json=$SRV npm=$NPM"
+          test "$PKG" = "$SRV" && test "$PKG" = "$NPM"
+
+      - name: Install mcp-publisher
+        run: |
+          curl -fsSL https://github.com/modelcontextprotocol/registry/releases/download/v1.8.1/mcp-publisher_linux_amd64.tar.gz | tar xz mcp-publisher
+          ./mcp-publisher --help > /dev/null
+
+      - name: Login (GitHub OIDC)
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish
+        run: ./mcp-publisher publish

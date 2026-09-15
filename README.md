@@ -48,6 +48,8 @@ In Claude: **Settings → Connectors → Add custom connector** → paste the UR
 }
 ```
 
+Installing with an AI agent (Cline, Claude Code, Cursor)? Point it at [llms-install.md](llms-install.md).
+
 ### Tools
 
 | Tool | What it does | Spends credits |

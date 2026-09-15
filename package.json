@@ -1,6 +1,6 @@
 {
   "name": "fattly",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "mcpName": "io.github.industriesfatty-spec/fattly",
   "description": "FATTLY from your terminal — generate AI images, video, voiceovers, avatars & UGC ads. Official CLI + MCP client for fattly.app.",
   "keywords": [

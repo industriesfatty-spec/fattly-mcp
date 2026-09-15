@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2 — 2026-09-15
+
+- Clear error messages for a missing key (points to `FATTLY_API_KEY`) and an invalid/revoked key (HTTP 401).
+- `llms-install.md` — step-by-step install guide for AI agents (Cline, Claude Code, Cursor).
+
 ## 0.1.1 — 2026-09-15
 
 - MCP tool annotations (`title`, `readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`) on all 6 tools.
